@@ -1000,12 +1000,6 @@ footer {
 </footer>
 
 <script>
-// ── AIRTABLE CONFIG ──
-// Replace these three values with your actual Airtable credentials
-const AIRTABLE_TOKEN = 'YOUR_AIRTABLE_TOKEN_HERE';
-const AIRTABLE_BASE_ID = 'YOUR_BASE_ID_HERE';
-const AIRTABLE_TABLE = 'Waitlist';
-
 async function submitWaitlist(emailId, roleId, successId) {
   const emailEl = document.getElementById(emailId);
   const roleEl  = document.getElementById(roleId);
@@ -1019,23 +1013,17 @@ async function submitWaitlist(emailId, roleId, successId) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    await fetch(`https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE}`, {
+    await fetch('/api/waitlist', {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        fields: {
-          Email: emailEl.value,
-          Role: roleEl ? roleEl.value : '',
-          Timestamp: new Date().toISOString(),
-          Source: window.location.href
-        }
+        email: emailEl.value,
+        role: roleEl ? roleEl.value : '',
+        timestamp: new Date().toISOString()
       })
     });
   } catch(e) {
-    console.error('Airtable error:', e);
+    console.error('Waitlist error:', e);
   }
   // Show success regardless — don't let a backend error block the UX
   emailEl.closest('.form-row').style.display = 'none';
