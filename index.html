@@ -85,7 +85,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--text);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -160,7 +160,7 @@ nav {
 .hero-subhead {
   font-size: 16px;
   font-weight: 300;
-  color: var(--dim);
+  color: var(--text);
   max-width: 480px;
   margin-bottom: 48px;
   line-height: 1.7;
@@ -249,7 +249,7 @@ nav {
 .form-note {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: var(--dim);
   padding: 10px 18px;
   border-top: 1px solid var(--border);
   letter-spacing: 0.05em;
@@ -428,7 +428,7 @@ nav {
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--dim);
+  color: var(--bright);
   padding: 0 32px;
 }
 .ticker-sep {
@@ -467,7 +467,7 @@ section { padding: 100px 48px; }
 .problem-intro { max-width: 560px; margin-bottom: 60px; }
 .problem-intro p {
   font-size: 17px;
-  color: var(--dim);
+  color: var(--bright);
   line-height: 1.75;
 }
 .problem-grid {
@@ -496,14 +496,14 @@ section { padding: 100px 48px; }
 }
 .problem-body {
   font-size: 14px;
-  color: var(--dim);
+  color: var(--bright);
   line-height: 1.7;
 }
 
 /* ── BENCHMARKS ── */
 .benchmarks { background: var(--black); }
 .bench-intro { max-width: 560px; margin-bottom: 60px; }
-.bench-intro p { font-size: 17px; color: var(--dim); line-height: 1.75; }
+.bench-intro p { font-size: 17px; color: var(--bright); line-height: 1.75; }
 .bench-table {
   width: 100%;
   border-collapse: collapse;
@@ -580,7 +580,7 @@ section { padding: 100px 48px; }
 }
 .audience-body {
   font-size: 14px;
-  color: var(--dim);
+  color: var(--text);
   line-height: 1.75;
 }
 .audience-tags {
@@ -623,7 +623,7 @@ section { padding: 100px 48px; }
 }
 .built-by p {
   font-size: 15px;
-  color: var(--dim);
+  color: var(--text);
   line-height: 1.8;
   margin-bottom: 32px;
 }
@@ -678,7 +678,7 @@ footer .inner {
 .footer-copy {
   font-family: var(--mono);
   font-size: 10px;
-  color: var(--muted);
+  color: var(--dim);
   letter-spacing: 0.08em;
 }
 .footer-links {
@@ -690,7 +690,7 @@ footer .inner {
   font-family: var(--mono);
   font-size: 10px;
   letter-spacing: 0.1em;
-  color: var(--muted);
+  color: var(--dim);
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.2s;
@@ -777,7 +777,7 @@ footer .inner {
         </select>
       </div>
       <div class="form-success" id="hero-success">✓ You're on the list. We'll be in touch shortly.</div>
-      <p class="form-note">No spam. No card required. <span>Early access pricing for waitlist members.</span></p>
+      <p class="form-note">No spam. No card required. Your data is processed in accordance with our <a href="/privacy" style="color: var(--accent-dim); text-decoration: underline;">Privacy Policy</a>. <span>Early access pricing for waitlist members.</span></p>
     </div>
 
     <a href="https://huggingface.co/spaces/vegaflow/beta" target="_blank" class="try-live-link reveal">
@@ -843,7 +843,7 @@ footer .inner {
     <div class="problem-card">
       <div class="problem-icon">▣</div>
       <div class="problem-title">Existing Tools Fall Short</div>
-      <div class="problem-body">Competitive solutions use aggressive temporal averaging that over-smooths output, introduces ghosting on fast motion, and destroys the perceptual quality they claim to protect.</div>
+      <div class="problem-body">Standard temporal averaging trades one artefact for another — suppressing luminance variance at the cost of motion blur, ghosting, and loss of the fine detail that made the footage worth stabilising.</div>
     </div>
   </div>
 </div>
@@ -856,7 +856,7 @@ footer .inner {
     <div class="section-number">02</div>
     <div class="section-label">Benchmark Results</div>
     <h2 class="section-title">Numbers that matter to professionals.</h2>
-    <p>Tested against DaVinci Resolve's native stabilisation on 4K RED RAW footage. Vega Flow exceeds Netflix's VMAF 93+ visually lossless threshold — a bar competitors don't reach.</p>
+    <p>Tested against DaVinci Resolve's native stabilisation on 4K RED RAW footage. Vega Flow exceeds Netflix's VMAF 93+ visually lossless threshold — a bar DaVinci Resolve's native deflicker does not reach on this test.</p>
   </div>
   <table class="bench-table reveal">
     <thead>
@@ -894,7 +894,7 @@ footer .inner {
       </tr>
     </tbody>
   </table>
-  <p class="bench-note reveal">RED 4K · 15-second test clip · Netflix VMAF 93+ visually lossless threshold exceeded</p>
+  <p class="bench-note reveal">RED 4K RAW · 15-second test clip · DaVinci Resolve 19, default deflicker settings · Composite score weighted across PSNR, T-SSIM, and luminance delta · Netflix VMAF 93+ visually lossless threshold exceeded</p>
 </div>
 </section>
 
@@ -1005,7 +1005,7 @@ footer .inner {
       </button>
     </div>
     <div class="form-success" id="bottom-success">✓ You're on the list. We'll be in touch shortly.</div>
-    <p class="form-note" style="text-align:center;">No spam. No card required. <span>Early access pricing for waitlist members.</span></p>
+    <p class="form-note" style="text-align:center;">No spam. No card required. Your data is processed in accordance with our <a href="/privacy" style="color: var(--accent-dim); text-decoration: underline;">Privacy Policy</a>. <span>Early access pricing for waitlist members.</span></p>
   </div>
 </div>
 </section>
@@ -1117,7 +1117,7 @@ function buildTicker() {
     { text: 'VFX Pipeline Ready', accent: false },
     { text: 'Archival Restoration', accent: false },
     { text: 'Patent Pending', accent: false },
-    { text: 'RED 4K Certified', accent: false },
+    { text: 'Tested on RED 4K RAW', accent: false },
     { text: 'Four-Stage Pipeline', accent: false },
     { text: 'Frame-Perfect Output', accent: false },
     { text: 'Edinburgh · Scotland', accent: false },
