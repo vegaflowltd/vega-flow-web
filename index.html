@@ -1013,7 +1013,7 @@ async function submitWaitlist(emailId, roleId, successId) {
   btn.textContent = 'Sending…';
   btn.disabled = true;
   try {
-    await fetch('/api/waitlist', {
+    await fetch('/.netlify/functions/waitlist', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
