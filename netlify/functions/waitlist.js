@@ -34,7 +34,7 @@ exports.handler = async function (event) {
   if (!response.ok) {
     const text = await response.text();
     console.error('Airtable error:', response.status, text);
-    return { statusCode: 502, body: JSON.stringify({ error: 'Upstream error' }) };
+    return { statusCode: 502, body: JSON.stringify({ error: 'Upstream error', status: response.status, detail: text }) };
   }
 
   return {
