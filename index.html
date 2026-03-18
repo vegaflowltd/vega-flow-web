@@ -49,6 +49,13 @@ body::before {
 ::-webkit-scrollbar-track { background: var(--black); }
 ::-webkit-scrollbar-thumb { background: var(--border-2); }
 
+/* ── MAX-WIDTH WRAPPER ── */
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* ── NAV ── */
 nav {
   position: fixed;
@@ -99,13 +106,17 @@ nav {
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
+  padding: 120px 48px 80px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.hero .inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  padding: 120px 48px 80px;
   align-items: center;
-  position: relative;
-  overflow: hidden;
 }
 .hero::after {
   content: '';
@@ -599,6 +610,9 @@ section { padding: 100px 48px; }
   grid-template-columns: 1fr 1fr;
   gap: 80px;
   align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
 }
 .built-by h2 {
   font-family: var(--serif);
@@ -652,11 +666,14 @@ footer {
   background: var(--black);
   border-top: 1px solid var(--border);
   padding: 28px 48px;
+}
+footer .inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  width: 100%;
 }
 .footer-left {
   display: flex;
@@ -706,12 +723,14 @@ footer {
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
-  .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 48px; }
+  .hero { padding: 100px 24px 60px; }
+  .hero .inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-visual { align-items: flex-start; }
   section { padding: 70px 24px; }
   .problem-grid, .audience-grid { grid-template-columns: 1fr; }
   .built-by-inner { grid-template-columns: 1fr; gap: 40px; }
-  footer { padding: 24px; flex-direction: column; align-items: flex-start; }
+  footer { padding: 24px; }
+  footer .inner { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -731,6 +750,7 @@ footer {
 
 <!-- HERO -->
 <section class="hero" id="home">
+<div class="inner">
   <div class="hero-content">
     <div class="hero-eyebrow reveal">Professional Video Temporal Stabilisation</div>
     <h1 class="hero-headline reveal">
@@ -797,6 +817,7 @@ footer {
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- TICKER -->
@@ -806,6 +827,7 @@ footer {
 
 <!-- PROBLEM -->
 <section class="problem" id="problem">
+<div class="inner">
   <div class="problem-intro reveal">
     <div class="section-number">01</div>
     <div class="section-label">The Problem</div>
@@ -829,10 +851,12 @@ footer {
       <div class="problem-body">Competitive solutions use aggressive temporal averaging that over-smooths output, introduces ghosting on fast motion, and destroys the perceptual quality they claim to protect.</div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- BENCHMARKS -->
 <section class="benchmarks" id="benchmarks">
+<div class="inner">
   <div class="bench-intro reveal">
     <div class="section-number">02</div>
     <div class="section-label">Benchmark Results</div>
@@ -876,10 +900,12 @@ footer {
     </tbody>
   </table>
   <p class="bench-note reveal">RED 4K · 15-second test clip · Netflix VMAF 93+ visually lossless threshold exceeded</p>
+</div>
 </section>
 
 <!-- AUDIENCE -->
 <section class="audience" id="audience">
+<div class="inner">
   <div class="audience-intro reveal">
     <div class="section-number">03</div>
     <div class="section-label">Use Cases</div>
@@ -927,6 +953,7 @@ footer {
       </div>
     </div>
   </div>
+</div>
 </section>
 
 <!-- BUILT BY -->
@@ -954,6 +981,7 @@ footer {
 
 <!-- FINAL CTA -->
 <section class="final-cta" id="waitlist">
+<div class="inner">
   <h2 class="hero-headline reveal">
     Be first to know<br>when we <em>launch.</em>
   </h2>
@@ -984,10 +1012,12 @@ footer {
     <div class="form-success" id="bottom-success">✓ You're on the list. We'll be in touch shortly.</div>
     <p class="form-note" style="text-align:center;">No spam. No card required. <span>Early access pricing for waitlist members.</span></p>
   </div>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer>
+<div class="inner">
   <div class="footer-left">
     <div class="logo-mark" style="font-size:16px;">Vega<span>Flow</span></div>
     <span class="footer-copy">© 2026 Vega Flow Ltd. Registered in Scotland.</span>
@@ -997,6 +1027,7 @@ footer {
     <li><a href="https://huggingface.co/spaces/vegaflow/beta" target="_blank">Try Beta</a></li>
   </ul>
   <div class="footer-right">VFL / V8.8-beta</div>
+</div>
 </footer>
 
 <script>
