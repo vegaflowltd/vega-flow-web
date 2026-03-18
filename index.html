@@ -428,10 +428,9 @@ nav {
   font-size: 11px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--dim);
   padding: 0 32px;
 }
-.ticker-item.accent { color: var(--accent-dim); }
 .ticker-sep {
   color: var(--border-2);
   padding: 0 8px;
@@ -641,10 +640,6 @@ section { padding: 100px 48px; }
   color: var(--muted);
   border: 1px solid var(--border-2);
   padding: 6px 14px;
-}
-.badge.accent-badge {
-  color: var(--accent);
-  border-color: var(--accent-dim);
 }
 
 /* ── FINAL CTA ── */
@@ -965,10 +960,10 @@ footer .inner {
       <h2>Precision engineering.<br>From Edinburgh.</h2>
       <p>Vega Flow is engineered by a team with deep expertise in quantitative systems and computational optimisation. We apply the same rigour to video that high-stakes analytical systems apply to precision — optimising for accuracy, not convenience.</p>
       <div class="badges">
-        <span class="badge accent-badge">Techscaler Catalyst 2026</span>
-        <span class="badge">Registered in Scotland</span>
         <span class="badge">Patent Pending</span>
+        <span class="badge">Registered in Scotland, United Kingdom</span>
         <span class="badge">contact@vegaflow.co.uk</span>
+        <span class="badge">Techscaler Supported</span>
       </div>
     </div>
     <div class="reveal">
@@ -1020,7 +1015,7 @@ footer .inner {
 <div class="inner">
   <div class="footer-left">
     <div class="logo-mark" style="font-size:16px;">Vega<span>Flow</span></div>
-    <span class="footer-copy">© 2026 Vega Flow Ltd. Registered in Scotland.</span>
+    <span class="footer-copy">© 2026 Vega Flow Ltd. Registered in Scotland, United Kingdom.</span>
   </div>
   <ul class="footer-links">
     <li><a href="mailto:contact@vegaflow.co.uk">contact@vegaflow.co.uk</a></li>
@@ -1117,15 +1112,15 @@ function animateReadout() {
 function buildTicker() {
   const items = [
     { text: 'Temporal Stabilisation', accent: false },
-    { text: 'AI-Generated Video', accent: true },
+    { text: 'AI-Generated Video', accent: false },
     { text: 'Broadcast Quality', accent: false },
-    { text: 'VFX Pipeline Ready', accent: true },
+    { text: 'VFX Pipeline Ready', accent: false },
     { text: 'Archival Restoration', accent: false },
-    { text: 'Patent Pending', accent: true },
+    { text: 'Patent Pending', accent: false },
     { text: 'RED 4K Certified', accent: false },
-    { text: 'Four-Stage Pipeline', accent: true },
+    { text: 'Four-Stage Pipeline', accent: false },
     { text: 'Frame-Perfect Output', accent: false },
-    { text: 'Edinburgh · Scotland', accent: true },
+    { text: 'Edinburgh · Scotland', accent: false },
   ];
   const inner = document.getElementById('ticker-inner');
   if (!inner) return;
