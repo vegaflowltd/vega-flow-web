@@ -1,0 +1,82 @@
+/* ── DM Mono ── */
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('DMMono-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url('DMMono-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('DMMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'DM Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('DMMono-Medium.woff2') format('woff2');
+}
+
+/* ── Cormorant Garamond (variable, covers 300–600) ── */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('CormorantGaramond.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url('CormorantGaramond-Italic.woff2') format('woff2');
+}
+
+/* ── Barlow ── */
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('Barlow-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('Barlow-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('Barlow-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('Barlow-SemiBold.woff2') format('woff2');
+}
