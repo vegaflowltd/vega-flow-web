@@ -78,6 +78,9 @@ nav {
   display: flex;
   gap: 32px;
   list-style: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .nav-links a {
   font-family: var(--mono);
@@ -105,7 +108,7 @@ nav {
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
-  padding: 120px 48px 80px;
+  padding: 120px 48px 40px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -756,8 +759,6 @@ footer .inner {
       blurring, ghosting, or destroying what your footage was meant to look like.
     </p>
     <div class="patent-badge reveal">Patent Pending</div>
-
-    <a href="#waitlist" class="form-submit reveal" style="display:inline-block; text-decoration:none; text-align:center; padding:14px 32px;">JOIN THE WAITLIST →</a>
 
 
   </div>
